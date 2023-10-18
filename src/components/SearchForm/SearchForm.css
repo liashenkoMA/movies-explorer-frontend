@@ -1,0 +1,154 @@
+.searchform {
+  min-height: 212px;
+
+  background-color: #FAFAFA;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchform__conteiner {
+  margin: 0 auto;
+
+  max-width: 1140px;
+  min-height: 72px;
+
+  background-color: #FFFFFF;
+  box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+
+  border-radius: 9px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchform__search {
+  min-width: 865px;
+  margin-left: 29px;
+  margin-right: 19px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search__input {
+  min-width: 830px;
+  min-height: 34px;
+
+  border: none;
+
+  background-color: transparent;
+  outline: none;
+}
+
+.search__input::placeholder {
+  padding-left: 30px;
+
+  background-image: url(../../images/iconsearch.svg);
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.search__btn {
+  width: 34px;
+  height: 34px;
+
+  background-color: #FFFFFF;
+  background-image: url(../../images/find.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border: none;
+}
+
+.search__btn:hover {
+  cursor: pointer;
+}
+
+.searchform__filtercheckbox {
+  border-left: 1px solid #CBCBCB;
+
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 1279px) {
+  .searchform__conteiner {
+    max-width: 800px;
+  }
+
+  .searchform__search {
+    min-width: 462px;
+    margin-left: 29px;
+    margin-right: 19px;
+  }
+
+  .search__input {
+    min-width: 428px;
+    min-height: 34px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .searchform {
+    min-height: 272px;
+  }
+
+  .searchform__conteiner {
+    max-width: 708px;
+    min-height: 72px;
+  }
+}
+
+@media (max-width: 767px) {
+  .searchform {
+    min-height: 272px;
+  }
+
+  .searchform__conteiner {
+    max-width: 300px;
+
+    flex-direction: column;
+
+    background-color: #FAFAFA;
+
+    box-shadow: none;
+  }
+
+  .searchform__search {
+    min-width: 300px;
+    margin-left: 29px;
+    margin-right: 29px;
+
+    box-shadow: 0px 3px 14px 0px rgba(0, 0, 0, 0.08);
+
+    border-radius: 9px;
+  }
+
+  .search__input {
+    min-width: 182px;
+    min-height: 72px;
+  }
+
+  .search__input::placeholder {
+    background-image: none;
+    padding-left: 19px;
+  }
+
+  .search__btn {
+    margin-right: 19px;
+  }
+
+  .searchform__filtercheckbox {
+    padding-top: 46px;
+
+
+    min-width: 300px;
+
+    border: none;
+  }
+}

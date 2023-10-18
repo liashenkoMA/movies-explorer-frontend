@@ -1,0 +1,269 @@
+.navigation {
+  margin-left: 45px;
+
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navigation__button {
+  display: none;
+}
+
+.navigation__conteiner_type_loggedoff {
+  min-width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation__icon {
+  margin-right: 7px;
+
+  width: 12px;
+  height: 14px;
+  vertical-align: middle
+}
+
+.navigation__link {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.navigation__link:hover {
+  opacity: 0.7;
+}
+
+.navigation__link:nth-child(3) {
+  margin-left: 16px;
+}
+
+.navigation__link_type_profile {
+  width: 100px;
+  height: 32px;
+
+  border-radius: 50px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+
+  background-color: #FAFAFA;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  z-index: 2;
+}
+
+.navigation__link_page-main {
+  background-color: #DDDEE3;
+}
+
+.navigation__link_type_profile:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.navigation__link_type_action {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #000000;
+}
+
+.navigation__btn {
+  width: 76px;
+  height: 32px;
+
+  display: block;
+  border: none;
+  border-radius: 3px;
+
+  background-color: #3456F3;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: #FFFFFF;
+  text-decoration: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation__btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.navigation__link_type_loggedIn {
+  padding-right: 30px;
+}
+
+.navigation__conteiner_type_loggedIn {
+  margin-left: auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.navigation__link_type_burger {
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .navigation {
+    max-width: 520px;
+
+    position: relative;
+  }
+
+  .navigation__burger_type_open {
+    max-width: 100%;
+
+    flex-direction: column;
+
+    background-color: rgba(0, 0, 0, 0.3);
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+
+  .navigation__conteiner_type_loggeon {
+    padding-top: 159px;
+    padding-bottom: 90px;
+    margin-left: auto;
+    min-width: 520px;
+    height: 100vh;
+
+    background-color: #FAFAFA;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navigation__conteiner_type_loggedoff {
+    display: none;
+  }
+
+  .navigation__button {
+    display: flex;
+
+    border: none;
+    background-color: #FAFAFA;
+  }
+
+  .navigation__button_type_open {
+    width: 38px;
+    height: 38px;
+
+    background-image: url(../../images/burger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+  }
+
+  .navigation__button_type_close {
+    width: 22px;
+    height: 22px;
+
+    background-image: url(../../images/closedburger.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+
+    top: 22px;
+    right: 22px;
+    position: absolute;
+    z-index: 2;
+  }
+
+  .navigation__button_type_close:hover {
+    opacity: 0.7;
+  }
+
+  .navigation__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+
+  .navigation__link {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .navigation__link:nth-child(n+2) {
+    padding-top: 28px;
+  }
+
+  .navigation__link:nth-child(3) {
+    margin-left: 0;
+  }
+
+  .navigation__link_type_loggedIn {
+    padding-top: 0;
+    font-size: 12px;
+  }
+
+  .navigation__btn {
+    font-size: 12px;
+  }
+
+  .navigation__link_page-main {
+    background-color: #FAFAFA;
+  }
+
+  .navigation__link_type_action {
+    border-bottom: 2px solid #000000;
+  }
+
+  .navigation__link_type_burger {
+    display: flex;
+  }
+}
+
+@media (max-width: 767px) {
+  .navigation__conteiner {
+    width: 100%;
+  }
+
+  .navigation__link {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .navigation__btn {
+    width: 54px;
+    height: 26px;
+
+    font-size: 10px;
+  }
+
+  .navigation__link_type_loggedIn {
+    padding-right: 14px;
+  }
+
+  .navigation__conteiner_type_loggeon {
+    padding-top: 144px;
+    padding-bottom: 46px;
+    min-width: 320px;
+  }
+
+  .navigation__link:nth-child(n+2) {
+    padding-top: 15px;
+  }
+}

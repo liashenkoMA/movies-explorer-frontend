@@ -1,0 +1,180 @@
+.techs {
+  background-color: #F5F5F5;
+}
+
+.techs__body {
+  max-width: 1140px;
+
+  margin: 0px auto;
+}
+
+.techs__header {
+  margin: 0;
+  padding-bottom: 23px;
+  padding-top: 100px;
+
+  border-bottom: 1px solid #000000;
+
+  font-size: 22px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  color: #000000;
+}
+
+.techs__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.techs__title {
+  margin: 0;
+  padding-top: 90px;
+
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 58px;
+  letter-spacing: -2px;
+  color: #000000;
+  text-align: center;
+}
+
+.techs__description {
+  max-width: 460px;
+  margin: 0;
+  padding-top: 26px;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.56px;
+  color: #000000;
+  text-align: center;
+}
+
+.techs__cards {
+  margin: 0;
+  padding-left: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  list-style: none;
+
+  display: flex;
+}
+
+.techs__card {
+  width: 90px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: #E8E8E8;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
+
+  color: #000000;
+}
+
+.techs__card:nth-child(even) {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 1279px) {
+  .techs__body {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .techs__body {
+    max-width: 668px;
+  }
+
+  .techs__header {
+    padding-top: 90px;
+  }
+
+  .techs__title {
+    padding-top: 80px;
+  }
+
+  .techs__description {
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: -0.48px;
+  }
+
+  .techs__cards {
+    padding-top: 83px;
+    padding-bottom: 90px;
+  }
+
+  .techs__card {
+    width: 84px;
+    height: 57px;
+
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+}
+
+@media (max-width: 767px) {
+  .techs__body {
+    max-width: 284px;
+  }
+
+  .techs__header {
+    padding-top: 70px;
+    padding-bottom: 28px;
+  }
+
+  .techs__title {
+    padding-top: 60px;
+
+  font-size: 30px;
+  line-height: normal;
+  letter-spacing: -1.2px;
+  }
+
+  .techs__description {
+    max-width: 292px;
+    padding-top: 24px;
+  
+    font-size: 11px;
+    line-height: 16px;
+    letter-spacing: -0.44px;
+  }
+
+  .techs__cards {
+    padding-top: 50px;
+    padding-bottom: 70px;
+  
+    max-width: 178px;
+    flex-wrap: wrap;
+  }
+
+  .techs__card {
+    width: 84px;
+    height: 57px;
+  
+    font-size: 12px;
+    letter-spacing: -0.48px;
+  }
+  
+  .techs__card:nth-child(even) {
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+
+  .techs__card:nth-child(n+3) {
+    margin-top: 10px;
+  }
+}
