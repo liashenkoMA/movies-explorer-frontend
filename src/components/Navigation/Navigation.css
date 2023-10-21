@@ -27,7 +27,15 @@
   vertical-align: middle
 }
 
-.navigation__link {
+.navigation__links {
+  display: flex;
+
+  list-style-type: none;
+
+  padding: 0;
+}
+
+.navigation__rout {
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -43,7 +51,7 @@
   margin-left: 16px;
 }
 
-.navigation__link_type_profile {
+.navigation__btn-profile_type_profile {
   width: 100px;
   height: 32px;
 
@@ -59,16 +67,16 @@
   z-index: 2;
 }
 
-.navigation__link_page-main {
+.navigation__btn-profile_page-main {
   background-color: #DDDEE3;
 }
 
-.navigation__link_type_profile:hover {
+.navigation__btn-profile_type_profile:hover {
   cursor: pointer;
   opacity: 0.7;
 }
 
-.navigation__link_type_action {
+.navigation__rout_type_action {
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
@@ -103,6 +111,12 @@
 
 .navigation__link_type_loggedIn {
   padding-right: 30px;
+
+  text-decoration: none;
+  color: #000000;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 .navigation__conteiner_type_loggedIn {
@@ -114,6 +128,10 @@
 
 .navigation__link_type_burger {
   display: none;
+}
+
+.navigation__btn-profile_type_burger {
+  background-color: #FAFAFA;
 }
 
 @media (max-width: 1023px) {
@@ -182,8 +200,8 @@
     background-position: center;
     background-color: transparent;
 
-    top: 22px;
-    right: 22px;
+    top: 26px;
+    right: 26px;
     position: absolute;
     z-index: 2;
   }
@@ -200,7 +218,7 @@
     text-align: center;
   }
 
-  .navigation__link {
+  .navigation__rout {
     font-size: 18px;
     font-weight: 500;
     line-height: normal;
@@ -227,7 +245,7 @@
     background-color: #FAFAFA;
   }
 
-  .navigation__link_type_action {
+  .navigation__rout_type_action {
     border-bottom: 2px solid #000000;
   }
 
@@ -236,14 +254,16 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .navigation__conteiner {
     width: 100%;
   }
 
-  .navigation__link {
+  .navigation__rout {
     font-size: 18px;
     line-height: normal;
+
+    padding-bottom: 7px;
   }
 
   .navigation__btn {
@@ -253,8 +273,21 @@
     font-size: 10px;
   }
 
+  .navigation__button_type_close {
+    width: 22px;
+    height: 22px;
+
+    top: 20px;
+    right: 20px;
+  }
+
   .navigation__link_type_loggedIn {
     padding-right: 14px;
+  }
+
+  .navigation__conteiner_type_loggedIn {
+    display: flex;
+    justify-content: flex-end;
   }
 
   .navigation__conteiner_type_loggeon {

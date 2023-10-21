@@ -107,6 +107,8 @@
   }
 
   .techs__description {
+    padding-top: 22px;
+
     font-size: 12px;
     line-height: 18px;
     letter-spacing: -0.48px;
@@ -126,14 +128,14 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .techs__body {
     max-width: 284px;
   }
 
   .techs__header {
-    padding-top: 70px;
-    padding-bottom: 28px;
+    padding-top: 69px;
+    padding-bottom: 27px;
   }
 
   .techs__title {

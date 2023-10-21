@@ -82,6 +82,8 @@
 .aboutproject__time_type_week {
   grid-area: backend;
 
+  min-width: 228px;
+
   background-color: #3456F3;
 }
 
@@ -96,6 +98,8 @@
 .aboutproject__typeproject_type_week {
   grid-area: week;
 
+  min-width: 228px;
+
   font-weight: 500;
   line-height: 17px;
   color: rgba(160, 160, 160, 1);
@@ -103,6 +107,8 @@
 
 .aboutproject__typeproject_type_month {
   grid-area: month;
+
+  min-width: 912px;
 
   font-weight: 500;
   line-height: 17px;
@@ -121,6 +127,18 @@
   
   .aboutproject__rightcolumn {
     min-width: 320px;
+  }
+
+  .aboutproject__time_type_week {
+    min-width: 140px;
+  }
+
+  .aboutproject__typeproject_type_week {
+    min-width: 140px;
+  }
+
+  .aboutproject__typeproject_type_month {
+    min-width: 528px;
   }
 }
 
@@ -143,16 +161,26 @@
   }
 
   .aboutproject__text {
+    padding-bottom: 93px;
+
     font-size: 12px;
     line-height: 18px;
   }
 
   .aboutproject__duration {
-    padding-bottom: 90px;
+    padding-bottom: 84px;
+  }
+
+  .aboutproject__time_type_week {
+    max-width: 140px;
+  }
+
+  .aboutproject__typeproject_type_month {
+    max-width: 528px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .aboutproject__conteiner {
     max-width: 284px;
   }
@@ -205,5 +233,17 @@
 
   .aboutproject__duration {
     padding-bottom: 58px;
+  }
+
+  .aboutproject__time_type_week {
+    min-width: 100px;
+  }
+
+  .aboutproject__typeproject_type_week {
+    min-width: 100px;
+  }
+
+  .aboutproject__typeproject_type_month {
+    min-width: 184px;
   }
 }

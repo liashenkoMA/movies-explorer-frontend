@@ -1,9 +1,13 @@
+.logo {
+  width: 38px;
+  height: 38px;
+}
+
 .logo__image {
   width: 38px;
   height: 38px;
 }
 
-.logo__link {
-  width: 38px;
-  height: 38px;
+.logo:hover {
+  opacity: 0.8;
 }

@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .footer__conteiner {
     max-width: 292px;
     max-height: 253px;
@@ -109,7 +109,7 @@
   }
   
   .footer__copyright {
-    padding-top: 30px;
+    padding-top: 28px;
 
     font-size: 12px;
     color: #A0A0A0;

@@ -1,7 +1,8 @@
 import React from 'react';
 import './Profile.css';
+import { Link } from 'react-router-dom';
 
-export function Profile() {
+export function Profile(props) {
 
   const [state, setState] = React.useState(true)
   const person = {
@@ -36,7 +37,7 @@ export function Profile() {
             ? (
               <>
                 <button type="button" className="profile__link-btn profile__link-btn_type_edit" onClick={handleClick}>Редактировать</button>
-                <button type="button" className="profile__link-btn profile__link-btn_type_exit">Выйти из аккаунта</button>
+                <Link to={props.rout.main} className="profile__link-btn profile__link-btn_type_exit">Выйти из аккаунта</Link>
               </>
             ) : (
               <>

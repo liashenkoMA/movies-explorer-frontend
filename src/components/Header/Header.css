@@ -5,7 +5,7 @@
   background-color: #FAFAFA;
 }
 
-.header__page-main {
+.page-main {
   background-color: #DDDEE3;
 }
 
@@ -27,12 +27,12 @@
 
 @media (max-width: 1023px) {
   .header__content {
-    max-width: 668px;
+    max-width: 708px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .header__content {
-    max-width: 284px;
+    max-width: 292px;
   }
 }

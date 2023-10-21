@@ -9,7 +9,7 @@ export function Login(props) {
       <section className="login">
         <div className="login__conteiner">
           <Logo rout={props.rout} />
-          <h2 className="login__title">Рады видеть!</h2>
+          <h1 className="login__title">Рады видеть!</h1>
           <form className="login__form">
             <label className="login__form-field">
               <span className="login__input-placeholder">E-mail</span>

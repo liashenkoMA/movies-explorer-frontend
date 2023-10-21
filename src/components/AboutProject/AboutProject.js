@@ -17,9 +17,9 @@ export function AboutProject() {
         </div>
         <div className='aboutproject__duration'>
           <p className="aboutproject__time aboutproject__time_type_week">1 неделя</p>
-          <p className="aboutproject__time aboutproject__typeproject_type_week">Back-end</p>
+          <p className="aboutproject__time aboutproject__typeproject aboutproject__typeproject_type_week">Back-end</p>
           <p className="aboutproject__time aboutproject__time_type_month">4 недели</p>
-          <p className="aboutproject__time aboutproject__typeproject_type_month">Front-end</p>
+          <p className="aboutproject__time aboutproject__typeproject aboutproject__typeproject_type_month">Front-end</p>
         </div>
       </div>
     </section>

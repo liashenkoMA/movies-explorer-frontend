@@ -49,7 +49,7 @@ function App() {
         <Route path={rout.profile} element={
           <>
             <Header rout={rout} />
-            <Profile />
+            <Profile rout={rout} />
           </>
         } />
         <Route path={rout.login} element={<Login rout={rout} />} />

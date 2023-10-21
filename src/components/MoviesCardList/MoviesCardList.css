@@ -11,7 +11,7 @@
 
   margin: 0 auto;
   padding-top: 80px;
-  padding-bottom: 80px;
+  padding-bottom: 77px;
 
   display: grid;
   grid-template-columns: repeat(4, 270px);
@@ -29,6 +29,10 @@
   background-color: #F4F4F4;
   border: none;
   border-radius: 6px;
+
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .moviescardlist__bnt:hover {
@@ -38,28 +42,30 @@
 
 @media (max-width: 1279px) {
   .moviescardlist__conteiner {
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, 260px);
     gap: 36px 10px;
   }
 }
 
 @media (max-width: 1023px) {
   .moviescardlist__conteiner {
+    padding-bottom: 76px;
+
     grid-template-columns: repeat(2, 339px);
     gap: 36px 30px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .moviescardlist__conteiner {
     padding-top: 50px;
 
     grid-template-columns: repeat(1, 300px);
-    gap: 20;
+    gap: 19px;
   }
 
   .moviescardlist__bnt {
     width: 240px;
-    height: 36px; 
+    height: 36px;
   }
 }

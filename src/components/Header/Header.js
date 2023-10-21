@@ -8,7 +8,7 @@ export function Header(props) {
   const location = useLocation();
 
   return (
-    <header className={`header ${location.pathname === props.rout.main ? 'header__page-main' : ''}`}>
+    <header className={`header ${location.pathname === props.rout.main ? 'page-main' : ''}`}>
       <section className="header__content">
         <Logo rout={props.rout} />
         <Navigation rout={props.rout} />

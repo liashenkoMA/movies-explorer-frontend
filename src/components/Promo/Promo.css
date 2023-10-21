@@ -6,19 +6,19 @@
 
   display: flex;
   justify-content: center;
-  align-items: center;
   position: relative;
 }
 
 .promo__icon {
+  margin: 80px auto 122px auto;
+
   width: 320px;
   height: 320px;
-
-  margin: auto auto;
 }
 
 .promo__header {
   margin: 0;
+  margin-top: 184px;
   max-width: 730px;
   max-height: 116px;
 
@@ -30,6 +30,7 @@
   text-align: center;
 
   position: absolute;
+  z-index: 1;
 }
 
 @media (max-width: 1279px) {
@@ -44,20 +45,34 @@
     min-width: 668px;
     min-height: 784px;
   }
+
+  .promo__icon {
+    margin: 224px auto;
+  }
+
+  .promo__header {
+    margin: 0;
+    margin-top: 326px;
+  }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .promo {
     min-width: 320px;
     min-height: 570px;
   }
 
   .promo__icon {
+    margin: 0;
+    margin-top: 142px;
+
     width: 248px;
     height: 248px;
   }
 
   .promo__header {
+    margin-top: 207px;
+
     max-width: 300px;
     max-height: 117px;
   

@@ -6,15 +6,16 @@
 }
 
 .register__conteiner {
-  margin: 70px auto 0px auto;
+  padding-top: 70px;
+  margin: 0px auto;
 
   max-width: 396px;
 }
 
 .register__title {
   margin: 0;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 38px;
+  padding-bottom: 35px;
 
   font-size: 24px;
   font-weight: 500;
@@ -29,7 +30,7 @@
 }
 
 .register__form-field:nth-child(even) {
-  padding: 24px 0px;
+  padding: 22px 0px;
 }
 
 .register__form-field:nth-child(3) {
@@ -71,7 +72,7 @@
   max-width: 390px;
 
   position: absolute;
-  top: 52px;
+  top: 50px;
   left: 0px;
 
   font-size: 10px;
@@ -81,7 +82,7 @@
 }
 
 .input-email-error {
-  top: 76px;
+  top: 70px;
 }
 
 .register__btn {
@@ -131,13 +132,15 @@
 
 @media (max-width: 1023px) {
   .register__conteiner {
-    margin: 232px auto 0px auto;
+    padding-top: 232px;
+    margin: 0px auto;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .register__conteiner {
-    margin: 56px auto 0px auto;
+    padding-top: 56px;
+    margin: 0px auto;
 
     display: flex;
     flex-direction: column;

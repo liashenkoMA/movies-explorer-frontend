@@ -10,7 +10,7 @@ export function Register(props) {
       <section className="register">
         <div className="register__conteiner">
           <Logo rout={props.rout} />
-          <h2 className="register__title">Добро пожаловать!</h2>
+          <h1 className="register__title">Добро пожаловать!</h1>
           <form className="register__form">
             <label className="register__form-field">
               <span className="register__input-placeholder">Имя</span>

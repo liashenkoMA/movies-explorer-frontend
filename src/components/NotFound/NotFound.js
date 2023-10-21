@@ -12,9 +12,9 @@ export function NotFound() {
   return (
     <main>
       <section className="notfound">
-        <h2 className="notfound__title">404</h2>
+        <h1 className="notfound__title">404</h1>
         <span className="notfound__description">Страница не найдена</span>
-        <button className="notfound__btn" onClick={handleClick}>Назад</button>
+        <button type="button" className="notfound__btn" onClick={handleClick}>Назад</button>
       </section>
     </main>
   );

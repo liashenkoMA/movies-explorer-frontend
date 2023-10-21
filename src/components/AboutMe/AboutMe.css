@@ -10,7 +10,7 @@
 
 .aboutme__header {
   margin: 0px;
-  padding-bottom: 23px;
+  padding-bottom: 24px;
   padding-top: 110px;
 
   border-bottom: 1px solid #000000;
@@ -24,6 +24,8 @@
 
 .aboutme__student {
   padding-top: 66px;
+
+  min-height: 327px;
 
   display: flex;
   justify-content: space-between;
@@ -118,6 +120,11 @@
     padding-top: 90px;
   }
 
+  
+.aboutme__student {
+  min-height: 307px;
+}
+
   .aboutme__name {
     max-width: 348px;
 
@@ -150,7 +157,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .aboutme__conteiner {
     max-width: 292px;
   }
@@ -170,8 +177,9 @@
   }
 
   .aboutme__photo {
-    max-width: 292px;
-    max-height: 352px;
+    min-width: 292px;
+    min-height: 352px;
+    object-fit: cover;
   }
 
   .aboutme__info {

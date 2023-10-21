@@ -24,14 +24,14 @@ export function Navigation(props) {
     <nav className={`navigation ${!open ? 'navigation__burger_type_open' : ''}`}>
       {loggedIn ? (
         <>
-          <button className={`navigation__button ${open ? 'navigation__button_type_open' : 'navigation__button_type_close'}`} onClick={isOpenMenu}></button>
+          <button type="button" className={`navigation__button ${open ? 'navigation__button_type_open' : 'navigation__button_type_close'}`} onClick={isOpenMenu}></button>
           <div className={`navigation__conteiner ${open ? 'navigation__conteiner_type_loggedoff' : 'navigation__conteiner_type_loggeon'}`}>
-            <div className="navigation__links">
-              <Link to={props.rout.main} className={`navigation__link navigation__link_type_burger ${location.pathname === props.rout.main && 'navigation__link_type_action'}`} >Главная</Link>
-              <Link to={props.rout.movies} className={`navigation__link ${location.pathname === props.rout.movies && 'navigation__link_type_action'}`} >Фильмы</Link>
-              <Link to={props.rout.savedmovies} className={`navigation__link ${location.pathname === props.rout.savedmovies && 'navigation__link_type_action'}`} >Сохранённые фильмы</Link>
-            </div>
-            <button type="button" onClick={handleClick} className={`navigation__link_type_profile ${location.pathname === props.rout.main && 'navigation__link_page-main'}`} ><img src={Navicon} alt="Навигация" className="navigation__icon"></img>Аккаунт</button>
+            <ul className="navigation__links">
+              <li className="navigation__link navigation__link_type_burger"><Link to={props.rout.main} className={`navigation__rout ${location.pathname === props.rout.main && 'navigation__rout_type_action'}`} >Главная</Link></li>
+              <li className="navigation__link"><Link to={props.rout.movies} className={`navigation__rout ${location.pathname === props.rout.movies && 'navigation__rout_type_action'}`} >Фильмы</Link></li>
+              <li className="navigation__link"><Link to={props.rout.savedmovies} className={`navigation__rout ${location.pathname === props.rout.savedmovies && 'navigation__rout_type_action'}`} >Сохранённые фильмы</Link></li>
+            </ul>
+            <button type="button" onClick={handleClick} className={`navigation__btn-profile navigation__btn-profile_type_profile ${location.pathname === props.rout.main && 'navigation__btn-profile_page-main'} ${!open ? 'navigation__btn-profile_type_burger' : ''}`} ><img src={Navicon} alt="Навигация" className="navigation__icon"></img>Аккаунт</button>
           </div>
         </>
       ) : (

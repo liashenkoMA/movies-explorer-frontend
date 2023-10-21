@@ -18,48 +18,4 @@ export const massiv = [{
   name: '33 слова о дизайне',
   duration: 100,
   image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайнеbbbbbbbbbbbbbbbbbbbbbbb',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 140,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 160,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},{
-  name: '33 слова о дизайне',
-  duration: 120,
-  image: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg',
-},];
+}];

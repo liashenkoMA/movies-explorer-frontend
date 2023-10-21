@@ -15,7 +15,7 @@ export function AboutMe() {
             </div>
             <a href="https://github.com/liashenkoMA" target='_blank' className="aboutme__github" rel='noopener noreferrer'>Github</a>
           </div>
-          <img src={photo} alt="Моё фото" className="aboutme__photo"></img>
+          <img src={photo} alt="Фотография владельца профиля" className="aboutme__photo"></img>
         </div>
       </div>
     </section>
