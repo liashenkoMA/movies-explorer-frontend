@@ -56,7 +56,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .moviescardlist__conteiner {
     padding-top: 50px;
 

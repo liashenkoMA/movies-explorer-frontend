@@ -44,6 +44,10 @@
   outline: none;
 }
 
+.search__input:focus {
+  border-bottom: 1px solid #3456F3;
+}
+
 .search__input::placeholder {
   padding-left: 30px;
 
@@ -122,7 +126,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .searchform {
     min-height: 262px;
   }

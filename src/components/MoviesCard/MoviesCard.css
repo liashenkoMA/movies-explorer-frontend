@@ -138,7 +138,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .moviescard {
     max-width: 300px;
     min-height: 235px;

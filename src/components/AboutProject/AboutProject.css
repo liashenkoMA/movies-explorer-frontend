@@ -180,7 +180,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .aboutproject__conteiner {
     max-width: 284px;
   }

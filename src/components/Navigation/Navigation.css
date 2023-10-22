@@ -141,7 +141,7 @@
     position: relative;
   }
 
-  .navigation__burger_type_open {
+  .navigation_type_open {
     max-width: 100%;
 
     flex-direction: column;
@@ -179,6 +179,11 @@
 
     border: none;
     background-color: #FAFAFA;
+  }
+
+  .navigation__button:hover {
+    opacity: 0.7;
+    cursor: pointer;
   }
 
   .navigation__button_type_open {
@@ -254,7 +259,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navigation__conteiner {
     width: 100%;
   }

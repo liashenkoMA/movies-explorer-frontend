@@ -40,7 +40,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navtab {
     min-width: 320px;
   }

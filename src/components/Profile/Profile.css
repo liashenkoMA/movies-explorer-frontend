@@ -184,7 +184,7 @@ input:disabled {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .profile__title {
     padding-top: 70px;
     padding-bottom: 80px;

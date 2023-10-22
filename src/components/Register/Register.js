@@ -14,17 +14,17 @@ export function Register(props) {
           <form className="register__form">
             <label className="register__form-field">
               <span className="register__input-placeholder">Имя</span>
-              <input type='text' className="register__input register__input_type_name" id="register-input-name" name='name' required minLength='2' maxLength='30'></input>
+              <input type='text' className="register__input register__input_type_name" id="register-input-name" name='name' placeholder='Имя' required minLength='2' maxLength='30'></input>
               <span className="register__input-error input-name-error"></span>
             </label>
             <label className="register__form-field">
               <span className="register__input-placeholder">E-mail</span>
-              <input type='email' className="register__input register__input_type_email" id="register-input-email" name='email' required></input>
+              <input type='email' className="register__input register__input_type_email" id="register-input-email" placeholder='email' name='email' required></input>
               <span className="register__input-error input-email-error"></span>
             </label>
             <label className="register__form-field">
               <span className="register__input-placeholder">Пароль</span>
-              <input type='password' className="register__input register__input_type_password" id="register-input-password" name='password' required></input>
+              <input type='password' className="register__input register__input_type_password" id="register-input-password" name='password' placeholder='password' required minLength={2} maxLength={30}></input>
               <span className="register__input-error input-password-error"></span>
             </label>
             <button type='submit' className="register__btn">Зарегистрироваться</button>

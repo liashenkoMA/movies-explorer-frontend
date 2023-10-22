@@ -21,7 +21,7 @@ export function Navigation(props) {
   };
 
   return (
-    <nav className={`navigation ${!open ? 'navigation__burger_type_open' : ''}`}>
+    <nav className={`navigation ${!open ? 'navigation_type_open' : ''}`}>
       {loggedIn ? (
         <>
           <button type="button" className={`navigation__button ${open ? 'navigation__button_type_open' : 'navigation__button_type_close'}`} onClick={isOpenMenu}></button>

@@ -54,6 +54,10 @@
   background-color: #FAFAFA;
 }
 
+.register__input::placeholder {
+  color: transparent;
+}
+
 .register__input:focus {
   outline: none;
   border-bottom: 1px solid #3456F3;
@@ -137,7 +141,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .register__conteiner {
     padding-top: 56px;
     margin: 0px auto;

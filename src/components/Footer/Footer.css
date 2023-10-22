@@ -87,7 +87,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .footer__conteiner {
     max-width: 292px;
     max-height: 253px;
