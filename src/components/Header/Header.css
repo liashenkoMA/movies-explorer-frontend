@@ -1,0 +1,38 @@
+.header {
+  min-height: 74px;
+
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+}
+
+.page-main {
+  background-color: #DDDEE3;
+}
+
+.header__content {
+  max-width: 1140px;
+
+  margin: 18px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1279px) {
+  .header__content {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .header__content {
+    max-width: 708px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__content {
+    max-width: 292px;
+  }
+}

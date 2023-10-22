@@ -1,0 +1,179 @@
+.register {
+  height: 100vh;
+  width: 100%;
+
+  background-color: #FAFAFA;
+}
+
+.register__conteiner {
+  padding-top: 70px;
+  margin: 0px auto;
+
+  max-width: 396px;
+}
+
+.register__title {
+  margin: 0;
+  padding-top: 38px;
+  padding-bottom: 35px;
+
+  font-size: 24px;
+  font-weight: 500;
+  line-height: normal;
+  color: #000000;
+}
+
+.register__form-field {
+  display: block;
+
+  position: relative;
+}
+
+.register__form-field:nth-child(even) {
+  padding: 22px 0px;
+}
+
+.register__form-field:nth-child(3) {
+  margin-bottom: 152px;
+}
+
+.register__input {
+  min-width: 396px;
+  min-height: 17px;
+  padding-bottom: 10px;
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #000000;
+
+  border: none;
+  border-bottom: 1px solid #E8E8E8;
+
+  background-color: #FAFAFA;
+}
+
+.register__input::placeholder {
+  color: transparent;
+}
+
+.register__input:focus {
+  outline: none;
+  border-bottom: 1px solid #3456F3;
+}
+
+.register__input-placeholder {
+  padding-bottom: 5px;
+
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+  color: #A0A0A0;
+}
+
+.register__input-error {
+  max-width: 390px;
+
+  position: absolute;
+  top: 50px;
+  left: 0px;
+
+  font-size: 10px;
+  font-weight: 400;
+  line-height: normal;
+  color: #EE3465;
+}
+
+.input-email-error {
+  top: 70px;
+}
+
+.register__btn {
+  min-width: 396px;
+  min-height: 45px;
+
+  background-color: #3456F3;
+
+  border: none;
+  border-radius: 3px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.register__btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.register__text {
+  padding-top: 16px;
+  display: block;
+
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #A0A0A0;
+  text-align: center;
+}
+
+.register__signin-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  color: #3456F3;
+
+  text-decoration: none;
+}
+
+.register__signin-link:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+@media (max-width: 1023px) {
+  .register__conteiner {
+    padding-top: 232px;
+    margin: 0px auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .register__conteiner {
+    padding-top: 56px;
+    margin: 0px auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .register__title {
+    padding-top: 50px;
+    padding-bottom: 80px;
+  }
+
+  .register__input {
+    min-width: 260px;
+    min-height: 17px;
+    padding-bottom: 10px;
+
+  }
+
+  .register__input-error {
+    max-width: 260px;
+  }
+
+  .register__btn {
+    min-width: 260px;
+
+    font-size: 12px;
+  }
+
+  .register__form-field:nth-child(3) {
+    margin-bottom: 240px;
+  }
+}
