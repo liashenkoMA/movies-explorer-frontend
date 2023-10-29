@@ -40,6 +40,19 @@
   cursor: pointer;
 }
 
+.moviescardlist__bnt_type_off {
+  display: none;
+}
+
+.moviescardlist__error-text {
+  max-width: 800px;
+  color: red;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+}
+
 @media (max-width: 1279px) {
   .moviescardlist__conteiner {
     grid-template-columns: repeat(3, 260px);
@@ -67,5 +80,9 @@
   .moviescardlist__bnt {
     width: 240px;
     height: 36px;
+  }
+
+  .moviescardlist__error-text {
+    max-width: 240px;
   }
 }

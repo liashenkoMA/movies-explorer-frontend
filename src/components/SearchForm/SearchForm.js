@@ -1,18 +1,58 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './SearchForm.css';
 import { FilterCheckbox } from '../FilterCheckbox/FilterCheckbox';
 
-export function SearchForm() {
+export function SearchForm({ rout, onSubmit, onSearch }) {
+
+  const [search, setSearch] = React.useState('');
+  const [check, setCheck] = React.useState(false);
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (location.pathname === rout.movies) {
+      setSearch(localStorage.getItem('input'));
+      setCheck(JSON.parse(localStorage.getItem('checkbox')));
+    }
+  }, [setSearch, setCheck, location.pathname, rout.movies]);
+
+  React.useEffect(() => {
+    if (location.pathname === rout.savedmovies) {
+      onSearch(search, check)
+    } else {
+      onSubmit(search, check);
+    }
+  }, [check]);
+
+  function handleChangeSearch(e) {
+    setSearch(e.target.value);
+  };
+
+  function handleFilter(e) {
+    setCheck(e.target.checked)
+  };
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (location.pathname === rout.movies) {
+      onSubmit(search, check);
+    } else {
+      onSearch(search, check)
+    }
+  };
+
   return (
     <div className="searchform">
-      <form className="searchform__conteiner" name='searchform' onSubmit={() => console.log('click')}>
+      <form className="searchform__conteiner" name='searchform' onSubmit={handleSubmit}>
         <div className="searchform__search">
           <label className="search">
-            <input className="search__input" id="search-input" type="search" name="search" placeholder="Фильм" required></input>
+            <input value={search || ''} className="search__input" id="search-input" type="search" onChange={handleChangeSearch} name="search" placeholder="Фильм" required></input>
           </label>
-          <button type="button" className="searchform__btn"></button>
+          <button type="submit" className="searchform__btn"></button>
         </div>
         <div className="searchform__filtercheckbox">
-          <FilterCheckbox />
+          <FilterCheckbox onChange={handleFilter} checked={check} />
         </div>
       </form>
     </div>

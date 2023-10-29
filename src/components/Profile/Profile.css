@@ -38,7 +38,7 @@
 
 .profile__form-field:nth-child(even) {
   padding-top: 12px;
-  padding-bottom: 200px;
+  margin-bottom: 200px;
 
   border: none;
 }
@@ -84,6 +84,7 @@ input:disabled {
 
   position: absolute;
   top: 23px;
+  z-index: 3;
 
   font-size: 10px;
   font-weight: 400;
@@ -159,6 +160,16 @@ input:disabled {
   opacity: 0.8;
 }
 
+
+.profile__button:disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+}
+
+.profile__button:disabled:hover {
+  opacity: 1;
+}
+
 .profile__error {
   max-width: 410px;
 
@@ -173,6 +184,20 @@ input:disabled {
   overflow-wrap: break-word;
 }
 
+.profile__text-isloading {
+  max-width: 410px;
+
+  padding-bottom: 20px;
+
+  text-align: center;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: normal;
+  color: green;
+
+  overflow-wrap: break-word;
+}
+
 @media (max-width: 1023px) {
   .profile__title {
     padding-top: 236px;
@@ -180,7 +205,7 @@ input:disabled {
   }
 
   .profile__form-field:nth-child(even) {
-    padding-bottom: 188px;
+    margin-bottom: 188px;
   }
 }
 
@@ -199,7 +224,7 @@ input:disabled {
   }
 
   .profile__form-field:nth-child(even) {
-    padding-bottom: 359px;
+    margin-bottom: 359px;
   }
 
   .profile__link-btn {

@@ -1,18 +1,100 @@
+import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './MoviesCardList.css';
 import { MoviesCard } from '../MoviesCard/MoviesCard';
-import { massiv } from '../../utils/massiv.js';
+import { CurrentMoviesContext } from '../../contexts/CurrentMoviesContext';
+import { CurrentSaveMoviesContext } from '../../contexts/CurrentSaveMoviesContext';
+import Preloader from '../Preloader/Preloader'
 
 export function MoviesCardList(props) {
 
+  const [currentMovies, setCurrentMovies] = React.useState([]);
+  const [totalCount, setTotalCount] = React.useState(0);
+  const [isLoad, setisLoad] = React.useState(props.isLoading);
+  const moviesContext = React.useContext(CurrentMoviesContext);
+  const moviesSaveContext = React.useContext(CurrentSaveMoviesContext);
+  const moviesSaveSearchFilms = props.currentSaveSearchMovies;
+  const screenWidth = window.screen.width;
+  const numberMovies = currentMovies.length;
+  const location = useLocation();
+
+  React.useEffect(() => {
+    if (localStorage.getItem('movies')) {
+      setisLoad(false)
+      setCurrentMovies(JSON.parse(localStorage.getItem('movies')));
+    } else {
+      setCurrentMovies(moviesContext);
+    }
+  }, [setCurrentMovies, moviesContext]);
+
+  React.useEffect(() => {
+    if (screenWidth >= 1280) {
+      setTotalCount(16);
+    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+      setTotalCount(12);
+    } else if (screenWidth >= 768 && screenWidth < 1024) {
+      setTotalCount(8);
+    } else if (screenWidth >= 320 && screenWidth < 768) {
+      setTotalCount(5);
+    }
+  }, [screenWidth, setTotalCount, currentMovies]);
+
+  function addMoviesBtn() {
+    if (screenWidth >= 1280) {
+      setTotalCount(totalCount + 4);
+    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+      setTotalCount(totalCount + 3);
+    } else if (screenWidth >= 768 && screenWidth < 1280) {
+      setTotalCount(totalCount + 2);
+    } else if (screenWidth >= 320 && screenWidth < 768) {
+      setTotalCount(totalCount + 2);
+    }
+  };
+
+  function checkMovies(movies, title) {
+    const film = movies.find((movie) => {
+      if (movie.nameRU.includes(title) || movie.nameEN.includes(title)) {
+        return movie;
+      }
+      return null
+    });
+    return film;
+  };
+
+  function saveFilm(title) {
+    props.saveMovies(checkMovies(currentMovies, title));
+  };
+
+  function deleteFilm(title) {
+    props.onDelete(checkMovies(moviesSaveContext, title))
+  }
+
   return (
     <section className="moviescardlist">
-      <div className="moviescardlist__conteiner">
-        {massiv.map((movie) => (
-          <MoviesCard rout={props.rout} name={movie.name} duration={movie.duration} image={movie.image} />
-        ))
-        }
-      </div>
-      <button type="button" className="moviescardlist__bnt">Ещё</button>
-    </section>
+      {isLoad
+        ?
+        <Preloader />
+        :
+        (numberMovies === 0 || props.errorMessage === true ?
+          (
+            <p className="moviescardlist__error-text">{props.errorMessage ? "Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз" : "Ничего не найдено"}</p>
+          )
+          :
+          (<div className="moviescardlist__conteiner">
+            {
+              location.pathname === props.rout.movies ?
+                currentMovies.filter((movies, index) => index < totalCount).map((movie) => (
+                  <MoviesCard key={movie.id} rout={props.rout} movie={movie} saveMovies={saveFilm} onDelete={deleteFilm} />
+                ))
+                :
+                moviesSaveSearchFilms.map((movie) => (
+                  <MoviesCard key={movie.movieId} rout={props.rout} movie={movie} onDelete={deleteFilm} />
+                ))
+            }
+          </div>)
+        )
+      }
+      <button type="button" className={`moviescardlist__bnt ${totalCount >= numberMovies ? 'moviescardlist__bnt_type_off' : ''}`} onClick={addMoviesBtn}>Ещё</button>
+    </section >
   );
 }
