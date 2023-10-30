@@ -26,9 +26,11 @@ function App() {
   const [currentSaveSearchMovies, setCurrentSaveSearchMovies] = React.useState([]);
   const [currentUser, setCurrentUser] = React.useState([]);
   const [errorMessage, setErrorMessage] = React.useState(false);
+  const [errorMessageMovies, setErrorMessageMovies] = React.useState(false);
   const [isLoading, setIsLoading] = React.useState(true);
   const [saveProfile, setSaveProfile] = React.useState(false);
   const navigate = useNavigate();
+  /* Проверить стейт ошибок, посмотреть, где он переключается, какие ошибки и на каких страницах выводит. Возможно сделать отдельный стейт под каждую страницу */
 
   const rout = {
     main: '/',
@@ -100,7 +102,7 @@ function App() {
       setCurrentMovies(moviesFilters);
     }).catch((err) => {
       console.log(err);
-      setErrorMessage(true)
+      setErrorMessageMovies(true)
     })
       .finally(() => setIsLoading(false));
   };
@@ -203,7 +205,7 @@ function App() {
               <Route path={rout.movies} element={
                 <ProtectedRoute rout={rout}>
                   <Header rout={rout} />
-                  <Movies rout={rout} onSubmit={handleGetAllMovies} saveMovies={saveMovies} onDelete={handleDeleteMovie} isLoading={isLoading} errorMessage={errorMessage} />
+                  <Movies rout={rout} onSubmit={handleGetAllMovies} saveMovies={saveMovies} onDelete={handleDeleteMovie} isLoading={isLoading} errorMessage={errorMessageMovies} />
                   <Footer />
                 </ProtectedRoute>
               } />

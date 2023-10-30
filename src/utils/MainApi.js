@@ -1,5 +1,5 @@
 const auth = {
-  baseUrl: 'https://api.moviesmak.nomoredomainsrocks.ru',
+  baseUrl: 'http://localhost:3000',
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
