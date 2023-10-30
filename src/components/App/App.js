@@ -30,7 +30,6 @@ function App() {
   const [isLoading, setIsLoading] = React.useState(true);
   const [saveProfile, setSaveProfile] = React.useState(false);
   const navigate = useNavigate();
-  /* Проверить стейт ошибок, посмотреть, где он переключается, какие ошибки и на каких страницах выводит. Возможно сделать отдельный стейт под каждую страницу */
 
   const rout = {
     main: '/',
@@ -83,23 +82,23 @@ function App() {
       return moviesList = moviesList.filter(function (movie) {
         return movie.duration <= 40;
       })
-    }
+    } 
 
     return moviesList;
   };
 
   function handleGetAllMovies(search, check) {
-    setIsLoading(true)
+    setIsLoading(true);
+
     getMovies().then((movies) => {
 
       let moviesFilters = filterSearch(movies, search);
       moviesFilters = filterCheack(moviesFilters, check);
+      setCurrentMovies(moviesFilters);
 
       localStorage.setItem('movies', JSON.stringify(moviesFilters));
       localStorage.setItem('input', search);
       localStorage.setItem('checkbox', check);
-
-      setCurrentMovies(moviesFilters);
     }).catch((err) => {
       console.log(err);
       setErrorMessageMovies(true)
@@ -110,8 +109,9 @@ function App() {
   function handleGetSaveMovies(search, check) {
 
     let moviesFilters = filterSearch(currentSaveMovies, search);
-    moviesFilters = filterCheack(moviesFilters, check);
 
+      moviesFilters = filterCheack(moviesFilters, check);
+    
     setCurrentSaveSearchMovies(moviesFilters);
   };
 
@@ -139,7 +139,7 @@ function App() {
 
   function checkisSaveProfile() {
     setSaveProfile(false)
-  }
+  };
 
   function patchUserInfo(name, email) {
     patchUser(name, email)
@@ -205,7 +205,7 @@ function App() {
               <Route path={rout.movies} element={
                 <ProtectedRoute rout={rout}>
                   <Header rout={rout} />
-                  <Movies rout={rout} onSubmit={handleGetAllMovies} saveMovies={saveMovies} onDelete={handleDeleteMovie} isLoading={isLoading} errorMessage={errorMessageMovies} />
+                  <Movies rout={rout} onSubmit={handleGetAllMovies} saveMovies={saveMovies} onDelete={handleDeleteMovie} isLoading={isLoading} errorMessage={errorMessageMovies} filterCheack={filterCheack} />
                   <Footer />
                 </ProtectedRoute>
               } />

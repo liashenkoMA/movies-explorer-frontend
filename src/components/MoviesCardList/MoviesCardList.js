@@ -8,12 +8,11 @@ import Preloader from '../Preloader/Preloader'
 
 export function MoviesCardList(props) {
 
+  const moviesContext = React.useContext(CurrentMoviesContext);
+  const moviesSaveContext = React.useContext(CurrentSaveMoviesContext);
   const [currentMovies, setCurrentMovies] = React.useState([]);
   const [totalCount, setTotalCount] = React.useState(0);
   const [isLoad, setisLoad] = React.useState(props.isLoading);
-  const moviesContext = React.useContext(CurrentMoviesContext);
-  const moviesSaveContext = React.useContext(CurrentSaveMoviesContext);
-  const moviesSaveSearchFilms = props.currentSaveSearchMovies;
   const screenWidth = window.screen.width;
   const numberMovies = currentMovies.length;
   const location = useLocation();
@@ -87,14 +86,14 @@ export function MoviesCardList(props) {
                   <MoviesCard key={movie.id} rout={props.rout} movie={movie} saveMovies={saveFilm} onDelete={deleteFilm} />
                 ))
                 :
-                moviesSaveSearchFilms.map((movie) => (
+                props.currentSaveSearchMovies.map((movie) => (
                   <MoviesCard key={movie.movieId} rout={props.rout} movie={movie} onDelete={deleteFilm} />
                 ))
             }
           </div>)
         )
       }
-      <button type="button" className={`moviescardlist__bnt ${totalCount >= numberMovies ? 'moviescardlist__bnt_type_off' : ''}`} onClick={addMoviesBtn}>Ещё</button>
+      <button type="button" className={`moviescardlist__bnt ${totalCount >= numberMovies || location.pathname === props.rout.savedmovies ? 'moviescardlist__bnt_type_off' : ''}`} onClick={addMoviesBtn}>Ещё</button>
     </section >
   );
 }

@@ -14,22 +14,20 @@ export function SearchForm({ rout, onSubmit, onSearch }) {
       setSearch(localStorage.getItem('input'));
       setCheck(JSON.parse(localStorage.getItem('checkbox')));
     }
-  }, [setSearch, setCheck, location.pathname, rout.movies]);
-
-  React.useEffect(() => {
-    if (location.pathname === rout.savedmovies) {
-      onSearch(search, check)
-    } else {
-      onSubmit(search, check);
-    }
-  }, [check]);
+  }, []);
 
   function handleChangeSearch(e) {
     setSearch(e.target.value);
   };
 
   function handleFilter(e) {
-    setCheck(e.target.checked)
+    setCheck(e.target.checked);
+
+    if (location.pathname === rout.savedmovies) {
+      onSearch(search, e.target.checked);
+    } else if (location.pathname === rout.movies) {
+      onSubmit(search, e.target.checked);
+    }
   };
 
   function handleSubmit(e) {
