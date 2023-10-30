@@ -37,7 +37,7 @@ export function Register(props) {
             </label>
             <label className="register__form-field">
               <span className="register__input-placeholder">E-mail</span>
-              <input type='email' onChange={handleChange} className="register__input register__input_type_email" id="register-input-email" placeholder='email' name='email' required></input>
+              <input type='email' onChange={handleChange} className="register__input register__input_type_email" id="register-input-email" placeholder='email' name='email' pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-z]{2,3}$" required></input>
               <span className="register__input-error input-email-error">{errors.email}</span>
             </label>
             <label className="register__form-field">

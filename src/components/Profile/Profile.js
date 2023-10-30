@@ -45,7 +45,7 @@ export function Profile(props) {
             <span className="profile__input-error input-name-error">{errors.name}</span>
           </label>
           <label className="profile__form-field">
-            <input className="profile__input profile__input_type_email" onChange={handleChange} id="profile-input-email" type="email" name='email' placeholder="E-mail" required disabled={state}></input>
+            <input className="profile__input profile__input_type_email" onChange={handleChange} id="profile-input-email" type="email" name='email' placeholder="E-mail" required disabled={state} pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-z]{2,3}$"></input>
             <span className="profile__value profile__value_type_email">{state === true ? user.email : ''}</span>
             <span className="profile__input-error">{errors.email}</span>
           </label>
@@ -67,4 +67,3 @@ export function Profile(props) {
     </main>
   );
 }
-
