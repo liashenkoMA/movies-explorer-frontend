@@ -43,6 +43,7 @@ function App() {
   const jwt = localStorage.getItem('jwt');
 
   React.useEffect(() => {
+    console.log(jwt)
     if (jwt) {
       getUser(jwt).then((data) => {
         setCurrentUser(data);

@@ -25,6 +25,10 @@ export function signUp(name, email, password) {
     })
   })
     .then(checkResponse)
+    .then((data) => {
+      localStorage.setItem('jwt', data.token)
+      return data;
+    })
 };
 
 export function signIn(email, password) {
