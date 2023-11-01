@@ -4,6 +4,7 @@ const auth = {
     'Accept': 'application/json',
     'Content-Type': 'application/json',
     'Access-Control-Allow-Origin': 'no-cors',
+    "Authorization": `Bearer ${localStorage.getItem('jwt')}`,
   }
 }
 

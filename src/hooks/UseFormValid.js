@@ -22,10 +22,10 @@ const useFormValidator = () => {
     });
 
     setFormValid(input.form.checkValidity());
+  };
 
+  return { values, errors, formValid, handleChange };
 
-  }
-  return { values, errors, formValid, handleChange }
 }
 
 export default useFormValidator;
