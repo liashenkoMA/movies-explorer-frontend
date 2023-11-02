@@ -4,7 +4,7 @@ import './MoviesCardList.css';
 import { MoviesCard } from '../MoviesCard/MoviesCard';
 import { CurrentMoviesContext } from '../../contexts/CurrentMoviesContext';
 import { CurrentSaveMoviesContext } from '../../contexts/CurrentSaveMoviesContext';
-import Preloader from '../Preloader/Preloader'
+import Preloader from '../Preloader/Preloader';
 
 export function MoviesCardList(props) {
 
@@ -13,9 +13,9 @@ export function MoviesCardList(props) {
   const [currentMovies, setCurrentMovies] = React.useState([]);
   const [totalCount, setTotalCount] = React.useState(0);
   const [isLoad, setisLoad] = React.useState(props.isLoading);
-  const screenWidth = window.screen.width;
   const numberMovies = currentMovies.length;
   const location = useLocation();
+  const [width, setWidth] = React.useState(window.innerWidth);
 
   React.useEffect(() => {
     if (localStorage.getItem('movies')) {
@@ -27,25 +27,37 @@ export function MoviesCardList(props) {
   }, [setCurrentMovies, moviesContext]);
 
   React.useEffect(() => {
-    if (screenWidth >= 1280) {
+    const handleResize = (event) => {
+      setWidth(event.target.innerWidth);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  console.log(width)
+
+  React.useEffect(() => {
+    if (width >= 1280) {
       setTotalCount(16);
-    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+    } else if (width >= 1024 && width < 1280) {
       setTotalCount(12);
-    } else if (screenWidth >= 768 && screenWidth < 1024) {
+    } else if (width >= 768 && width < 1024) {
       setTotalCount(8);
-    } else if (screenWidth >= 320 && screenWidth < 768) {
+    } else if (width >= 320 && width < 768) {
       setTotalCount(5);
     }
-  }, [screenWidth, setTotalCount, currentMovies]);
+  }, [width, setTotalCount, currentMovies]);
 
   function addMoviesBtn() {
-    if (screenWidth >= 1280) {
+    if (width >= 1280) {
       setTotalCount(totalCount + 4);
-    } else if (screenWidth >= 1024 && screenWidth < 1280) {
+    } else if (width >= 1024 && width < 1280) {
       setTotalCount(totalCount + 3);
-    } else if (screenWidth >= 768 && screenWidth < 1280) {
+    } else if (width >= 768 && width < 1280) {
       setTotalCount(totalCount + 2);
-    } else if (screenWidth >= 320 && screenWidth < 768) {
+    } else if (width >= 320 && width < 768) {
       setTotalCount(totalCount + 2);
     }
   };
