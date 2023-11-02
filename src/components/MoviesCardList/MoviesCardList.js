@@ -36,8 +36,6 @@ export function MoviesCardList(props) {
     };
   }, []);
 
-  console.log(width)
-
   React.useEffect(() => {
     if (width >= 1280) {
       setTotalCount(16);

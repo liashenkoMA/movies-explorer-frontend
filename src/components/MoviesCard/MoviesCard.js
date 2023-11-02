@@ -49,10 +49,10 @@ export function MoviesCard(props) {
       return `moviescard__btn_type_icon ${save ? 'moviescard__btn_type_activeicon' : ''}`
     }
   };
-
+  console.log(props)
   return (
     <div className="moviescard">
-      <img src={location.pathname === props.rout.movies ? `https://api.nomoreparties.co${props.movie.image.url}` : props.movie.image} className="moviescard__img" alt={`Картинка к фильму - ${props.movie.nameRU}`}></img>
+      <a href={props.movie.trailerLink} target='_blank' rel='noopener noreferrer'><img src={location.pathname === props.rout.movies ? `https://api.nomoreparties.co${props.movie.image.url}` : props.movie.image} className="moviescard__img" alt={`Картинка к фильму - ${props.movie.nameRU}`}></img></a>
       <div className="moviescard__description">
         <h2 className="moviescard__title">{props.movie.nameRU}</h2>
         <span className="moviescard__duration">{durationFilm()}</span>
