@@ -57,6 +57,7 @@ function App() {
     if (jwt) {
       getSaveMovies().then((moviesList) => {
         setCurrentSaveMovies(moviesList.data);
+        setCurrentSaveSearchMovies(moviesList.data);
       }).catch((err) => {
         console.log(err);
       })
@@ -172,6 +173,7 @@ function App() {
     postMovies(movie.country, movie.director, movie.duration, movie.year, movie.description, image, movie.trailerLink, thumbnail, movie.id, movie.nameRU, movie.nameEN)
       .then((movie) => {
         setCurrentSaveMovies([movie.data, ...currentSaveMovies]);
+        setCurrentSaveSearchMovies([movie.data, ...currentSaveMovies]);
       })
       .catch((err) => {
         console.log(err)
