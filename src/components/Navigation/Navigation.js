@@ -1,20 +1,27 @@
+import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Navigation.css';
 import Navicon from '../../images/Navicon.svg'
-import React from 'react';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
 
 export function Navigation(props) {
 
-  const loggedIn = true;
-
+  const user = React.useContext(CurrentUserContext);
   const [open, setOpen] = React.useState(true);
+  const [loggedIn, setloggedIn] = React.useState(false);
   const navigate = useNavigate();
   const location = useLocation();
 
+  React.useEffect(() => {
+    if (user.email) {
+      setloggedIn(true)
+    }
+  }, [user, setloggedIn]);
+
   function isOpenMenu() {
     setOpen(!open);
-  }
+  };
 
   function handleClick() {
     navigate(props.rout.profile);

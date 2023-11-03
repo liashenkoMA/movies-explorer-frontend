@@ -2,14 +2,13 @@ import './Movies.css';
 import { SearchForm } from '../SearchForm/SearchForm';
 import { MoviesCardList } from '../MoviesCardList/MoviesCardList';
 
-export function Movies(props) {
-
+export function Movies({ rout, onSubmit, saveMovies, onDelete, isLoading, errorMessage, filterCheack }) {
 
   return (
     <main>
       <section className="movies">
-        <SearchForm />
-        <MoviesCardList rout={props.rout} />
+        <SearchForm rout={rout} onSubmit={onSubmit} filterCheack={filterCheack} />
+        <MoviesCardList rout={rout} saveMovies={saveMovies} onDelete={onDelete} isLoading={isLoading} errorMessage={errorMessage} />
       </section>
     </main>
   );

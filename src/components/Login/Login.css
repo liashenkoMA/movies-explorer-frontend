@@ -23,6 +23,10 @@
   color: #000000;
 }
 
+.login__form {
+  position: relative;
+}
+
 .login__form-field {
   display: block;
 
@@ -134,6 +138,28 @@
   opacity: 0.7;
 }
 
+.login__form-error {
+  position: absolute;
+  bottom: 60px;
+  left: 0px;
+
+  color: #FF004C;
+  text-align: center;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.login__btn:disabled {
+  background-color: #F8F8F8;
+  color: #C2C2C2;
+}
+
+.login__btn:disabled:hover {
+  opacity: 1;
+}
+
 @media (max-width: 1023px) {
   .login__conteiner {
     padding-top: 232px;
@@ -175,7 +201,7 @@
 
     font-size: 12px;
   }
-  
+
   .login__signin-link {
     font-size: 12px;
   }
